@@ -8,9 +8,7 @@ export default function AddBook() {
 
   const { register, handleSubmit,errors, } = useForm();
   const [imageURL, setIMageURL] = useState()
-
-
-
+  
   const onSubmit = data => {
       console.log(data);
       console.log(imageURL);
@@ -22,6 +20,7 @@ export default function AddBook() {
     };
     console.log(eventData);
     const url = `http://localhost:5000/addbook`;
+    
     fetch(url, {
       method: 'POST', 
       headers: {

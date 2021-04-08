@@ -1,12 +1,14 @@
 import React, { createContext, useState } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Admin from './components/Admin/Admin';
+import Checkout from './components/Checkout/Checkout';
 import Deals from './components/Deals/Deals';
 import NavigationBar from "./components/Header/NavigationBar";
 import Home from './components/Home/Home';
 import Login from './components/Login/Login';
 import Notfound from './components/NotFound/Notfound';
 import Orders from './components/Orders/Orders';
+import PrivateRoute from './PrivateRoute/PrivateRoute';
 
 
 export const UserContext = createContext();
@@ -25,15 +27,18 @@ const App = () => {
           <Route path="/home">
             <Home />
           </Route>
-          <Route path="/admin">
+          <PrivateRoute path="/admin">
             <Admin />
-          </Route>
-          <Route path="/orders">
+          </PrivateRoute>
+          <PrivateRoute path="/orders">
             <Orders />
-          </Route>
-          <Route path="/deals">
+          </PrivateRoute>
+          <PrivateRoute path="/book/:id">
+            <Checkout />
+          </PrivateRoute>
+          <PrivateRoute path="/deals">
             <Deals />
-          </Route>
+          </PrivateRoute>
           <Route path="/login">
             <Login />
           </Route>
