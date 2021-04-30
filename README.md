@@ -1,6 +1,10 @@
-# This is a assignment of programming hero 
-##  Its a client side code 
-## technology used : react js , context api , react router , nodejs , mongodb , react bootstrap and material ui and react hook form
+# Project title : Book Attic
+## Technology used : Front end : Reactjs, Boostrap and Backend : Express js, mongodb
+Features: Developed a website where a user can order a book, An admin can add or delete items
 
-# full-stack-client-KaziMinhaj
+Live preview: 
+Back end : 
+
+
+Developer: Kazi Minhaj
 
